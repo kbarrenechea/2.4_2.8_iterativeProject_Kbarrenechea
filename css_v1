@@ -1,0 +1,229 @@
+/*CSS files add styling rules to your content */
+/* To import fonts into our website by using third party plug in */
+@import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap');
+
+body{
+	font-family: helvetica, arial, sans-serif;
+	margin: 0;
+}
+
+.grid-container {
+	display: grid;
+	grid-template-columns: 200px auto;
+	grid-template-rows:100px 50px 1500px 50px;
+	height: 100vh;
+}
+
+.header {
+	box-sizing: border-box;
+	background-color: #196EBC;
+	text-align: center;
+	grid-column-start: 1;
+	grid-column-end: span 3;
+}
+/* CSS for styling Navigation/Menu */
+.nav {
+	box-sizing: border-box;
+	background-color: #00428F;
+	grid-column-start: 1;
+	grid-column-end: span 3;
+}
+
+/* CSs for block menu */
+ul {
+	display: inline;
+	padding: 15px 0px 0px 0px;
+	list-style:none;
+}
+
+ul li {
+	font-family: Arial;
+	font-size: 16px;
+	font-weight: bold;
+	display: inline-block;
+	margin-right: -4px;
+	position: relative;
+	padding: 15px 50px; /*padding for main block buttons*/
+}
+
+ul li:hover {
+	background: #85b7ec;
+}
+
+/*Hover colors*/
+a:link {color:#FFFFFF;} /*unvisited link */
+a:visited {color:#FFFFFF;}/*visited link */
+a:hover {color:#1cla54;} /*mouse over link */
+a:active{color:#FFFFFF;} /*selected link*/
+
+a {
+	text-decoration: none;
+}
+
+ul li ul {
+	padding: 0;
+	position: absolute;
+	top: 48px; /*space between each drop-down menu list */
+	left: 0;
+	width: 158px; /* width of drop-down menu list */
+	display: none;
+	visibility: hidden; /* this hides the drop-down menu list*/
+	z-index: 1; /*for overlapping divs, bringing to the front like a drop down menu */
+}
+
+/*Is the dropdown box */
+ul li ul li {
+	background: #31abdd; /* this is the drop-down menu background color */
+	display: block;
+}
+
+ul li ul li:hover {background: #85b7ec;} /* this is the drop-down menu hover on blocks*/
+
+ul li:hover ul {
+	display: block;
+	visibility: visible; /* this makes the drop-down menu visiable */
+}
+	
+.content {
+	box-sizing: border-box;
+	position: relative;
+	padding-left: 10px;
+	grid-column-end: span 3;
+	background: url(../images/rangituhi_image1_edited.jpg) no-repeat center center; /*adding a background image in the content area*/
+	background-size: cover;	
+}
+
+.scroll-area {
+	position: absolute;
+	height: 100%;
+	overflow: auto;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.text{
+	overflow: auto;
+	width:95%;
+	background-color: gray;
+	border-radius: 15px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	opacity: 80%;
+}
+
+h1 {
+	font-family: "Sigmar", sans-serif;
+	font-weight: 375;
+	letter-spacing: 0.2eM;
+	font-style: italic bold;
+	color: #000000;
+	text-shadow: 2px 2px 2px grey;
+}
+
+h2 {
+	font-family: "Sigmar", sans-serif;
+	font-weight: 375;
+	letter-spacing: 0.2eM;
+	font-style: italic bold;
+	color: #000000;
+	text-shadow: 2px 2px 2px grey;
+}
+
+p {
+	font-size 15px;
+	line-height: 1.5eM;
+}
+
+p1 {
+	font-size 15px;
+	line-height: 1.5eM;
+}
+
+.slider {
+	position: relative;
+	width: 21%; /*adjustment to show each image on the carousel. */
+	overflow: hidden; /* overflow hides next image. */
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.images{
+	display: flex;
+	width: 100%;
+}
+
+.images img {
+	height: 400px;
+	width: 100%;
+	transition: all 0.15s ease;  /* timing transition to show next image. */
+	border-radius: 20px;
+}
+
+.images input {
+	display: none; /* display none hides the 3 image behind the 1st image */
+}
+
+.dots {
+	display: flex;
+	justify-content: center;
+	margin: 5px;
+}
+
+.dots label {
+	height: 20px;
+	width: 20px;
+	border-radius: 50%;
+	border: solid #ffffff 3px;
+	cursor: pointer;
+	transition: all 0.15s ease; /* timing transition to show next image. */
+	margin: 5px;
+}
+
+.dots label:hover {background: #ffffff;}
+#img1:checked ~ .m1 { /* ~ is a selector used to select each "m" element following checked. */
+	margin-left: 0;
+}
+
+#img2:checked ~ .m2 {
+	margin-left: -100%;
+}
+
+#img3:checked ~ .m3 {
+	margin-left: -200%;
+}
+
+#img4:checked ~ .m4 {
+	margin-left: -300%;
+}
+	
+/* CSS for styling back to top button */
+
+#myBtn {
+	display: none;
+	position: fixed;
+	bottom: 20px;
+	right: 30px;
+	z-index: 99; /*z-index brings the element/button to the front */
+	font-size: 18px;
+	border: none;
+	outline: none;
+	background-color: #31abdd; /*calling up the variable color to be used. */
+	color: white;
+	cursor: pointer; /* Setting the icon to be used for my button on hover. */
+	padding: 15px;
+	border-radius:4px;
+}
+
+#myBtn:hover { /*the color of the background when cursor hovers over it */
+	background-color: #B53737; /*calling the variable color to be used */
+}
+
+.footer {
+	background-color: #196EBC;
+	grid-column-end: span 3;
+	padding-left: 5px;
+	padding-top: 5px;
+}	
