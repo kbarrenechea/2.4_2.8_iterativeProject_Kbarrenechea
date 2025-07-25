@@ -1,6 +1,7 @@
 /*CSS files add styling rules to your content */
 /* To import fonts into our website by using third party plug in */
 @import url('https://fonts.googleapis.com/css2?family=Sigmar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
 
 body{
 	font-family: helvetica, arial, sans-serif;
@@ -47,7 +48,7 @@ ul li {
 }
 
 ul li:hover {
-	background: #85b7ec;
+	background: #4a98f7;
 }
 
 /*Hover colors*/
@@ -101,25 +102,28 @@ ul li:hover ul {
 	padding-right: 10px;
 }
 
+/* Adding a background box behind the text*/
 .text{
 	overflow: auto;
 	width:95%;
-	background-color: gray;
+	background-color: #FFFFFF;
 	border-radius: 15px;
 	padding-left: 10px;
 	padding-right: 10px;
 	padding-bottom: 5px;
 	margin-left: auto;
 	margin-right: auto;
-	opacity: 80%;
+	opacity: 70%;
+	color: #000000;
 }
 
 h1 {
-	font-family: "Sigmar", sans-serif;
+	font-family: "Lilita One", sans-serif;
 	font-weight: 375;
 	letter-spacing: 0.2eM;
+	font-size: 40px;
 	font-style: italic bold;
-	color: #000000;
+	color: #FFFFFF;
 	text-shadow: 2px 2px 2px grey;
 }
 
@@ -176,13 +180,13 @@ p1 {
 	height: 20px;
 	width: 20px;
 	border-radius: 50%;
-	border: solid #ffffff 3px;
+	border: solid #000000 3.5px;
 	cursor: pointer;
 	transition: all 0.15s ease; /* timing transition to show next image. */
 	margin: 5px;
 }
 
-.dots label:hover {background: #ffffff;}
+.dots label:hover {background: #000000;}
 #img1:checked ~ .m1 { /* ~ is a selector used to select each "m" element following checked. */
 	margin-left: 0;
 }
@@ -218,7 +222,7 @@ p1 {
 }
 
 #myBtn:hover { /*the color of the background when cursor hovers over it */
-	background-color: #B53737; /*calling the variable color to be used */
+	background-color: #3895eb; /*calling the variable color to be used */
 }
 
 .footer {
@@ -226,4 +230,5 @@ p1 {
 	grid-column-end: span 3;
 	padding-left: 5px;
 	padding-top: 5px;
+	color: #000000;
 }	
