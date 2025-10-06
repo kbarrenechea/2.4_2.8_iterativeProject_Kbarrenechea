@@ -39,7 +39,7 @@ body{
 	grid-column-end: span 3;
 }
 
-/* CSs for block menu */
+/* CSS for block menu */
 ul {
 	display: inline;
 	padding: 15px 0px 0px 0px;
@@ -75,7 +75,7 @@ ul li ul {
 	position: absolute;
 	top: 48px; /*space between each drop-down menu list */
 	left: 0;
-	width: 158px; /* width of drop-down menu list */
+	width: 163px; /* width of drop-down menu list */
 	display: none;
 	visibility: hidden; /* this hides the drop-down menu list*/
 	z-index: 1; /*for overlapping divs, bringing to the front like a drop down menu */
@@ -232,9 +232,7 @@ p1 {
 }
 
 .video {
-	margin-left: auto;
-	margin-right: auto;
-	position: absolute;
+
 }
 	
 /* CSS for styling back to top button */
